@@ -7,7 +7,7 @@ import Search from "./Search"
 const Header = () => {
   return (
     <div>
-       <h1> Header </h1>
+       
        <Head />
        <Search />
        <Navbar />
