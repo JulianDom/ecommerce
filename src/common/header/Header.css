@@ -151,7 +151,7 @@ header ul li a:hover {
     z-index: 1000;
     width: 100%;
     background-color: #fff;
-    box-shadow: -1px 11px 24px -11px rgba(r0ed, gre0en, 0, 0.2) ;
+    box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.2) ;
     transition: 0.5s;
 }
 
@@ -170,6 +170,7 @@ header ul li a:hover {
         height: 100vh;
         background-color: #fff;
         z-index: 888;
+        box-shadow:rgba(50, 50, 93, 0.23 ) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px ;
     }
     header ul li {
         width: 100%;
@@ -181,7 +182,8 @@ header ul li a:hover {
         display: none;
 
     }
-    .close.open {
+    .close,
+    .open{
         position: absolute;
         top: 30px;
         right: 20px;
@@ -190,4 +192,23 @@ header ul li a:hover {
         font-size: 25px;
         z-index: 999;
     }
+
+    .open {
+        top: 29%;
+        right: 30px;
+       
+    }
+    .close {
+        right: 45%;
+    }
+    .close .home-btn {
+        background: linear-gradient(145deg, #e2e8ec, #fff);
+        color: #ff014f;
+        border-radius: 50%;
+        padding: 0;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+    .head {}
 }

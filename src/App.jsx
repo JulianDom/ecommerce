@@ -1,6 +1,7 @@
 import './App.css'
 import Header from "./common/header/Header"
-import { BrowserRouter as Router,Routes} from "react-router-dom" 
+import { BrowserRouter as Router,Routes,Route} from "react-router-dom" 
+import Pages from "./pages/Pages"
 
 function App() {
 
@@ -9,9 +10,9 @@ function App() {
       <Router>
         <Header />
          <Routes>
-          {/*<Route path="/" exact> 
-             <About />
-            </Route> */}
+          <Route path="/" element = {<Pages />}exact> 
+              
+            </Route> 
           </Routes> 
       </Router>
   </div>
