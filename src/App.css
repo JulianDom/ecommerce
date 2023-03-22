@@ -86,13 +86,13 @@ input, button {
 
 /*-----------category----------*/
 .contentWidth {
-    width: 77%;
+    width: 78%;
   }
   .category {
     box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
     background-color: #fff;
     width: 23%;
-    height: 460px;
+    height: 480px;
     padding: 15px 0;
     border-radius: 5px;
     margin-top: 5px;
@@ -117,3 +117,21 @@ input, button {
     cursor: pointer;
   }
 /*-----------category----------*/
+
+.btn-primary {
+    background-color: #e94560;
+    padding: 13px 30px;
+    font-weight:bold;
+    color: #fff;
+    border-radius: 5px;
+
+}
+
+.top {
+    margin-top: 80px;
+}
+
+.mtop {
+    margin-top: 40px;
+}
+
