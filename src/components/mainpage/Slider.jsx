@@ -5,10 +5,10 @@ const Slider = () => {
   return (
     <>
       <section className='homeSlide contentWidth'>
-            <div className="container">
-              <SlideCard />
-            </div>
-           </section>
+        <div className='container'>
+          <SlideCard />
+        </div>
+      </section>
     </>
   )
 }
