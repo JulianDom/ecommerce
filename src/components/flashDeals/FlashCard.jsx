@@ -29,7 +29,7 @@ const FlashCard = ({ productItems }) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 100,
     slidesToShow: 4,
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
@@ -62,9 +62,6 @@ const FlashCard = ({ productItems }) => {
                   </div>
                   <div className='price'>
                     <h4>${productItems.price}.00 </h4>
-                    {/* step : 3
-                     if hami le button ma click garryo bahne
-                    */}
                     <button>
                       <i className='fa fa-plus' />
                     </button>
