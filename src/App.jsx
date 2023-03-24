@@ -4,19 +4,36 @@ import Header from './common/header/Header'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Pages from './pages/Pages'
 import Data from './components/flashDeals/Data'
+import Cart from './common/cart/Cart'
 import { useState } from 'react'
 
 function App () {
-// stpe 1: fetch data from database
-
   const { productItems } = Data
   const [cartItem, setCardItem] = useState([])
+
+  const addToCart = (product) => {
+    const productExit = cartItem.find((item) => item.id === product.id)
+
+    if (productExit) {
+      setCardItem(cartItem.map((item) =>
+        (item.id === product.id
+          ? { ...productExit, qty: productExit.qty + 1 }
+
+          : item)))
+    } else {
+      setCardItem([...cartItem, { ...product, qty: 1 }])
+    }
+  }
+  console.log()
   return (
     <div>
       <Router>
-        <Header />
+        <Header cartItem={cartItem} />
         <Routes>
-          <Route path='/' element={<Pages productItems={productItems} />} exact />
+          <Route path='/' element={<Pages productItems={productItems} addToCart={addToCart} />} exact />
+        </Routes>
+        <Routes>
+          <Route path='/Cart' element={<Cart cartItem={cartItem} addToCart={addToCart} />} exact />
         </Routes>
       </Router>
     </div>

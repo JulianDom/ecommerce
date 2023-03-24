@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import React from 'react'
+import { useState, React } from 'react'
 import Slider from 'react-slick'
 
 const NextArrow = (props) => {
@@ -25,9 +25,14 @@ const PrevArrow = (props) => {
   )
 }
 
-const FlashCard = ({ productItems }) => {
+const FlashCard = ({ productItems, addToCart }) => {
+  const [count, setCount] = useState(0)
+  const increment = () => {
+    setCount(count + 1)
+  }
+
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 100,
     slidesToShow: 4,
@@ -47,8 +52,8 @@ const FlashCard = ({ productItems }) => {
                   <span className='discount'>{productItems.discount}% Off</span>
                   <img src={productItems.cover} alt='' />
                   <div className='product-like'>
-                    <label>0</label> <br />
-                    <i className='fa-regular fa-heart'> </i>
+                    <label>{0}</label> <br />
+                    <i className='fa-regular fa-heart' onClick={() => increment} />
                   </div>
                 </div>
                 <div className='product-details'>
@@ -62,7 +67,7 @@ const FlashCard = ({ productItems }) => {
                   </div>
                   <div className='price'>
                     <h4>${productItems.price}.00 </h4>
-                    <button>
+                    <button onClick={() => addToCart(productItems)}>
                       <i className='fa fa-plus' />
                     </button>
                   </div>
@@ -75,5 +80,4 @@ const FlashCard = ({ productItems }) => {
     </>
   )
 }
-
 export default FlashCard
