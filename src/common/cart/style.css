@@ -80,7 +80,9 @@
     border: 1px solid rgb(3 0 71 / 9%);
     color: #e94560;
   }
-  .incCart:hover, .desCart:hover
+  .incCart:hover, 
+  .desCart:hover,
+  .removeCart button:hover
   {
     background: #e94560;
     color: white;
