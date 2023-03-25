@@ -24,7 +24,16 @@ function App () {
       setCardItem([...cartItem, { ...product, qty: 1 }])
     }
   }
-  console.log()
+
+  const descraseQty = (product) => {
+    const productExit = cartItem.find((item) => item.id === product.id)
+    if (productExit.qty === 1) {
+      setCardItem(cartItem.filter((item) => item.id !== product.id))
+    } else {
+      setCardItem(cartItem.map((item) => (item.id === product.id ? { ...productExit, qty: productExit.qty - 1 } : item)))
+    }
+  }
+
   return (
     <div>
       <Router>
@@ -33,7 +42,7 @@ function App () {
           <Route path='/' element={<Pages productItems={productItems} addToCart={addToCart} />} exact />
         </Routes>
         <Routes>
-          <Route path='/Cart' element={<Cart cartItem={cartItem} addToCart={addToCart} />} exact />
+          <Route path='/Cart' element={<Cart cartItem={cartItem} addToCart={addToCart} descraseQty={descraseQty} />} exact />
         </Routes>
       </Router>
     </div>
