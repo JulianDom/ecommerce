@@ -6,9 +6,12 @@ import Pages from './pages/Pages'
 import Data from './components/flashDeals/Data'
 import Cart from './common/cart/Cart'
 import { useState } from 'react'
+import Sdata from './components/shop/Sdata'
+import Footer from './common/footer/Footer'
 
 function App () {
   const { productItems } = Data
+  const { shopItems } = Sdata
   const [cartItem, setCardItem] = useState([])
 
   const addToCart = (product) => {
@@ -39,11 +42,12 @@ function App () {
       <Router>
         <Header cartItem={cartItem} />
         <Routes>
-          <Route path='/' element={<Pages productItems={productItems} addToCart={addToCart} />} exact />
+          <Route path='/' element={<Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />} exact />
         </Routes>
         <Routes>
           <Route path='/Cart' element={<Cart cartItem={cartItem} addToCart={addToCart} descraseQty={descraseQty} />} exact />
         </Routes>
+        <Footer />
       </Router>
     </div>
   )
