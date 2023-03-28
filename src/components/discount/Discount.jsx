@@ -1,26 +1,26 @@
 import React from 'react'
-import Cart from './Cart'
+import Dcard from './Dcard'
 
-const NewArrivals = () => {
+const Discount = () => {
   return (
     <>
-      <section className='NewArrivals background'>
+      <section className='Discount background NewArrivals'>
         <div className='container'>
           <div className='heading d_flex'>
             <div className='heading-left row  f_flex'>
-              <img src='https://img.icons8.com/glyph-neue/64/26e07f/new.png' />
-              <h2>New Arrivals </h2>
+              <img src='https://img.icons8.com/windows/32/fa314a/gift.png' />
+              <h2>Big Discounts</h2>
             </div>
             <div className='heading-right row '>
               <span>View all</span>
               <i className='fa-solid fa-caret-right' />
             </div>
           </div>
-          <Cart />
+          <Dcard />
         </div>
       </section>
     </>
   )
 }
 
-export default NewArrivals
+export default Discount
