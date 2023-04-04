@@ -14,7 +14,7 @@ body {
 }
 
 .background {
-    background-color: #f6f9fc;
+    background-color: #f7f7f7;
     padding: 50px 0;
 }
 
@@ -74,7 +74,7 @@ input, button {
     width: 50px;
     height: 50px;
     line-height: 50px;
-    background-color: #f3f5f9;
+    background-color: #86BBD8;
     margin-left: 20px;
     text-align: center;
     border-radius: 50%;
@@ -112,17 +112,20 @@ input, button {
     padding: 0 20px;
   }
   .category .box:hover {
-    background-color: #ffe1e6;
+    background-color: #9EE493;
     cursor: pointer;
   }
   
   /*---------category----------*/
   .btn-primary {
-    background: #e94560;
+    background: #9EE493;
     padding: 13px 40px;
     font-weight: bold;
-    color: #fff;
+    color: #000;
     border-radius: 5px;
+  }
+  .btn-primary:hover {
+    cursor: pointer;
   }
   .top {
     margin-top: 80px;
@@ -131,7 +134,7 @@ input, button {
     margin-top: 40px;
   }
   .heading i {
-    color: #e94560;
+    color: #9EE493;
     margin: 10px;
   }
   .heading {
@@ -141,7 +144,7 @@ input, button {
     position: absolute;
     top: 0;
     left: 0;
-    background: #e94560;
+    background: #86BBD8;
     padding: 3px 10px;
     font-size: 12px;
     border-radius: 50px;
@@ -169,11 +172,11 @@ input, button {
 .product .price {
   display: flex;
   justify-content: space-between;
-  color: #e94560;
+  color: #86BBD8;
 }
 .price button {
   background: none;
-  color: #e94560;
+  color: #86BBD8;
   font-size: 20px;
   transition: 0.5s;
   border: 1px solid rgb(3 0 71 / 9%);
@@ -183,7 +186,7 @@ input, button {
 }
 .price button:hover {
   cursor: pointer;
-  background-color: #e94560;
+  background-color: #86BBD8;
   color: #fff;
 }
 .product-like {
@@ -195,7 +198,7 @@ input, button {
   transition: 0.5s;
 }
 .product-like label {
-  background-color: #0f3460;
+  background-color: #86BBD8;
   padding: 1px 10px;
   font-size: 12px;
   color: white;
@@ -218,7 +221,7 @@ input, button {
   width: 50px;
   height: 50px;
   line-height: 60px;
-  background: #0f3460;
+  background: #9EE493;
   border-radius: 50%;
   transform: 0.5s;
   z-index: 5;
@@ -237,7 +240,7 @@ input, button {
 }
 .control-btn .prev:hover,
 .control-btn .next:hover {
-  background: #e94560;
+  background: #86BBD8;
   color: white;
   cursor: pointer;
 }
